@@ -20,7 +20,7 @@ class testGUI(QtGui.QWidget):
         self.testClearButton = QtGui.QPushButton('Clear')
         self.testClearButton.clicked.connect(self.clearCounter)
         
-        testLayout = QtGui.QHBoxLayout(self)
+        testLayout = QtGui.QHBoxLayout()
         testLayout.addStretch(1)
         testLayout.addWidget(testLabel)
         testLayout.addWidget(self.testCounterLabel)
