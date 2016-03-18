@@ -4,21 +4,29 @@ from PyQt4 import QtCore, QtGui
 UPDATE_RATE_HZ = 100.0
 
 class mainWindow(QtGui.QWidget):
+	# class variables are declared here, that are shared by all instances of 
+	# this class.
 	def __init__(self):
 		super(mainWindow, self).__init__()
 		self.setGeometry(400,300,300,100)				
 		self.setWindowTitle("Stop Watch")
 
-		self.counter = 0
+		self.counter = 0.0
 		self.started = False
 
-		# creating labels and buttons 
+		# creating labels and buttons
+		# In general, do not pass "self" as argument when instantiating Qt widgets
 		self.timeLabel = QtGui.QLabel("Time (s):")
-		self.timeCounterLabel = QtGui.QLabel(str(self.counter))
+		self.timeCounterLabel = QtGui.QLabel("%.2f" % self.counter)
 		self.startButton = QtGui.QPushButton("Start")
 		self.clearButton = QtGui.QPushButton("Clear")
 
-		# arranging labels and buttons
+		# Arranging labels and buttons
+		# Attributes without "self" are accessible only within the method where
+		# they are declared, e.g these layouts below won't be accessible
+		# by any other methods rather than this one (i.e __init__ method).
+		# Can do this to layouts since they are only necessary at initialization.
+		# Otherwise, be careful with scopes and namespaces.
 		h1Layout = QtGui.QHBoxLayout()
 		h2Layout = QtGui.QHBoxLayout()
 		vLayout = QtGui.QVBoxLayout()
