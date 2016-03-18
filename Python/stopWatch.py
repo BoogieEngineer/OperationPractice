@@ -18,9 +18,14 @@ class mainWindow(QtGui.QWidget):
 		self.clearButton = QtGui.QPushButton("Clear")
 
 		# arranging labels and buttons
-		self.hLayout = QtGui.QHBoxLayout(self)
+		self.hLayout = QtGui.QHBoxLayout()
+		self.vLayout = QtGui.QVBoxLayout()
+		self.vLayout.addWidget(self.timeLabel)
+		self.vLayout.addWidget(self.timeCounterLabel)
+		self.vLayout.addWidget(self.startButton)
+		self.vLayout.addWidget(self.clearButton)
 
-
+		self.setLayout(self.vLayout)
 
 def main():
 	app = QtGui.QApplication(sys.argv)
@@ -30,5 +35,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-	# add some comments see what happens next
