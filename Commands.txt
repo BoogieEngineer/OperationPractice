@@ -1,0 +1,11 @@
+git status: Check status of your files.
+cd "C:\Users\mha\Work\Programming Languages\OperationPractice": Move to .git folder, i.e. local git. From here you can commit. Can copy this command and paste to bash using middle mouse
+git add <option>: Add chosen files from local folder to local git. <option> being * is add all files.
+git commit -a -m "Commit message": Bypass staging (-a option) and commit to the head, not to your remote repository yet.
+git push origin master: Push head to the repository. Change "master" to whatever branch you want. This requires username and password.
+	git push: Push all files to the remote repository.
+To discard commits and pull a copy of the remote repo, e.g. in case you've deleted stuff and committed and want to reverse the change
+	git reset --hard origin/<branch>: Discard commits and reset the local repo status to the current <branch> (e.g. master) in the remote repo.
+	git pull origin <branch>: Pull <branch> (e.g. master) to the local repo.
+git pull: To pull the remote repo to the local repo.
+
