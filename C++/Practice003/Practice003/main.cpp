@@ -41,6 +41,18 @@ int main()
 	teal.print();
 	crap.print();
 
+	// Introduction to pointers:
+	int* x;
+	int* y;
+
+	x = new int;
+	*x = 2;
+	y = x;
+	cout << "y points to " << *y << "\n";
+	*x = 3;
+	cout << "Now y points to " << *y;
+	// End intro to pointers.
+
 	cin.get();
 	return 0;
 }
