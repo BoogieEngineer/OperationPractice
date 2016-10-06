@@ -24,9 +24,7 @@ int main()
     // print the results
     cout << userInputNumber << " decimal = " 
         << oct << userInputNumber << " octal = " 
-        << hex << userInputNumber << " hexadecimal"; 
+        << hex << userInputNumber << " hexadecimal\n"; 
 
-    cin.get();
-    cin.get();
     return 0;
 }

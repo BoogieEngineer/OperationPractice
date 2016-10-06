@@ -22,8 +22,7 @@ int main(void)
         "A semicolon terminates most statements.\n"
         "10%% of \"nothing\" is 100%% of \"nothing\".\n"
         "Use \\n to cause a newline; use \\t to cause a tab.\n"
-        "Use \\a to cause a beep (only on some platforms)!");
+        "Use \\a to cause a beep (only on some platforms)!\n");
 
-    getchar();
     return(EXIT_SUCCESS);
 }
