@@ -16,10 +16,11 @@
 
 using namespace std;
 
+const char LEADER_CHAR    = '.'; // define leader character
+const char DIAGONAL_CHAR  = '%'; // define diagonal character
+
 int main()
 {
-    const char LEADER_CHAR    = '.'; // define leader character
-    const char DIAGONAL_CHAR  = '%'; // define diagonal character
     // Define necessary variables:
     int numberOfLines; 
 

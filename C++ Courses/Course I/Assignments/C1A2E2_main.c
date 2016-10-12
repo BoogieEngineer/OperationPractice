@@ -25,15 +25,15 @@ int main(void)
 
     // Taking user input:
     printf("Enter number of lines (a positive decimal integer): ");
-    scanf("%i", &numberOfLines);
+    scanf("%d", &numberOfLines);
 
     // Use nested "for" loops to print the result
     // "row" keeps track of number of lines
     // "column" keeps track of number of leader characters in a line
-    for (row = 1; row <= numberOfLines; ++row)
+    for (row = 0; row <= numberOfLines; ++row)
     {
         int column;
-        for (column = 1; column < row; ++column)
+        for (column = 0; column < row; ++column)
         {
             printf("%c", LEADER_CHAR);
         }

@@ -24,20 +24,16 @@
 
 using namespace std;
 
+const int CASE_NUMERAL_DIFFERENCE = 'a' - 'A';
+
 int main()
 {
-    // Define case numeral difference: 'a' - 'A':
-    const char CASE_NUMERAL_DIFFERENCE = 'a' - 'A';
-
-    // Declare the variables:
-    char inputChar, outputChar;
-
     // Take user input:
     cout << "Enter a character: ";
-    cin.get(inputChar);
+    char inputChar = (char)cin.get();
 
     // Calculate the ouput:
-    outputChar = (char)(inputChar + (char)CASE_NUMERAL_DIFFERENCE);
+    char outputChar = (char)(inputChar + CASE_NUMERAL_DIFFERENCE);
 
     // Print out the result:
     cout << "The lowercase equivalent of " << inputChar << " is " << outputChar << "\n";
