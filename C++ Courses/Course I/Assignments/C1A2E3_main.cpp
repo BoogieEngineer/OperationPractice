@@ -3,7 +3,7 @@
  * Email address: hahongminh@gmail.com
  * Course: C/C++ Programming I, Section ID 118011, instructor: Raymond Mitchell.
  * Date: 10/11/2016.
- * Name of this file: C1A2E2_main.c
+ * Name of this file: C1A2E3_main.cpp
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
@@ -16,9 +16,7 @@
 
 using namespace std;
 
-
-
-int main(void)
+int main()
 {
     const char LEADER_CHAR    = '.'; // define leader character
     const char DIAGONAL_CHAR  = '%'; // define diagonal character

@@ -37,7 +37,7 @@ int main()
     cin.get(inputChar);
 
     // Calculate the ouput:
-    outputChar = (char)(inputChar + CASE_NUMERAL_DIFFERENCE);
+    outputChar = (char)(inputChar + (char)CASE_NUMERAL_DIFFERENCE);
 
     // Print out the result:
     cout << "The lowercase equivalent of " << inputChar << " is " << outputChar << "\n";
