@@ -7,6 +7,9 @@
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
+ * This programs takes a user input (a positive integer) and print that number of 
+ * lines, consisting of diagonal lines of a certain leader character and diagonal
+ * character.
  */
 
 #include <iostream>
