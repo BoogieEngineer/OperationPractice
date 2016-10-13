@@ -36,7 +36,7 @@ int main()
     char outputChar = (char)(inputChar + CASE_NUMERAL_DIFFERENCE);
 
     // Print out the result:
-    cout << "The lowercase equivalent of " << inputChar << " is " << outputChar << "\n";
+    cout << "The lowercase equivalent of '" << inputChar << "' is '" << outputChar << "'\n";
 
     return 0;
 }
