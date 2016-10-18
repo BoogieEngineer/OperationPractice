@@ -15,6 +15,8 @@
 
 using namespace std;
 
+const int DECIMAL_BASE = 10; // This constant is used to extract last digit
+
 int main()
 {
     int currentNumber;
@@ -29,17 +31,18 @@ int main()
     // Use a new bool to test if the input is non-negative
     bool inputIsNonNegative = currentNumber >= 0;
 
-    // If input number is negative, convert it to positive
+    // If input number is not non-negative, convert it to non-negative
+    // (0 remains 0)
     if (!inputIsNonNegative)
         currentNumber = -currentNumber;
 
     // Loop through the algorithm to arrange the digits in reverse order
-    // At least 1 iteration is need, so "do" loop was chosen.
+    // At least 1 iteration is needed, so "do" loop is used.
     do
     {
-        int currentLeastSignificantDigit = currentNumber % 10;
+        int currentLeastSignificantDigit = currentNumber % DECIMAL_BASE;
         cout << currentLeastSignificantDigit;
-        currentNumber /= 10;
+        currentNumber /= DECIMAL_BASE;
     } while (currentNumber != 0);
     
     // If the original input was negative, print also a minus sign in the end
