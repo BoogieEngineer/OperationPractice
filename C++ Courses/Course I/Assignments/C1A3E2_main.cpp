@@ -8,7 +8,7 @@
  * Compiler & version: Visual C++ 2010.
  *
  * This programs takes a user-input number and display the number in reverse, including
- * the minus sign if the input is a negative integer, cutting off any trailing 0s
+ * the minus sign if the input is a negative integer, cutting off any leading 0s
  */
 
 #include <iostream>
@@ -17,28 +17,36 @@ using namespace std;
 
 int main()
 {
-    int inputNumber;
+    int currentNumber;
 
+    // Take user input
     cout << "Enter any integer value: ";
-    cin >> inputNumber;
+    cin >> currentNumber;
 
-    // Use a new var to test if the input is positive
-    bool inputIsPositive = inputNumber > 0;
+    // Print first part of the text
+    cout << "\"" << currentNumber << "\" in reverse is \"";
+
+    // Use a new bool to test if the input is non-negative
+    bool inputIsNonNegative = currentNumber >= 0;
 
     // If input number is negative, convert it to positive
-    if (!inputIsPositive)
-        inputNumber = -inputNumber;
+    if (!inputIsNonNegative)
+        currentNumber = -currentNumber;
 
-    int reversedInput = (inputNumber % 10);
-    float temp = reversedInput / 10;
-
-    while (temp != 0)
+    // Loop through the algorithm to arrange the digits in reverse order
+    // At least 1 iteration is need, so "do" loop was chosen.
+    do
     {
-        reversedInput  = reversedInput % 10;
-        temp = reversedInput / 10;
-    }
-        
-    cout << "\"" << inputNumber << "\" in reverse is \"" << reversedInput << "\"\n";
+        int currentLeastSignificantDigit = currentNumber % 10;
+        cout << currentLeastSignificantDigit;
+        currentNumber /= 10;
+    } while (currentNumber != 0);
+    
+    // If the original input was negative, print also a minus sign in the end
+    if (!inputIsNonNegative)
+        cout << "-";
+
+    cout << "\"\n";
 
     return 0;
 }
