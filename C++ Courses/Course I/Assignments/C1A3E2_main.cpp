@@ -15,7 +15,7 @@
 
 using namespace std;
 
-const int DECIMAL_BASE = 10; // This constant is used to extract last digit
+const int LEAST_SIGNIFICANT_DIGIT_EXTRACTOR = 10; // This constant is used to extract last digit
 
 int main()
 {
@@ -40,9 +40,9 @@ int main()
     // At least 1 iteration is needed, so "do" loop is used.
     do
     {
-        int currentLeastSignificantDigit = currentNumber % DECIMAL_BASE;
+        int currentLeastSignificantDigit = currentNumber % LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
         cout << currentLeastSignificantDigit;
-        currentNumber /= DECIMAL_BASE;
+        currentNumber /= LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
     } while (currentNumber != 0);
     
     // If the original input was negative, print also a minus sign in the end
