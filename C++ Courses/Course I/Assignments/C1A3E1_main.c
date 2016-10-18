@@ -19,14 +19,18 @@
 
 int main(void)
 {
+    // Declare and initialize the necessary variables
     int factorialMultiplier, inputNumber;
     long factorialResult = 1;
 
     printf("Enter a positive decimal integer: ");
     scanf("%d", &inputNumber);
+
+    // Setup the result table
     printf("nbr           nbr!\n");
     printf("------------------\n");
 
+    // Main loop for calculating the result:
     for (factorialMultiplier = 1; factorialMultiplier <= inputNumber; ++factorialMultiplier)
     {
         factorialResult *= factorialMultiplier;
