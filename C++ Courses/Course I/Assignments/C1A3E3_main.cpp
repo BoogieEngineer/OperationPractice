@@ -43,11 +43,16 @@ int main()
     }
 
     // Implement algorithm Part 1:
-    int divisor = 1, dividend = currentNumber;
-    while (dividend > MSD_EXTRACTOR - 1)
+    int divisor = 1; //, dividend = currentNumber;
+    /*while (dividend > MSD_EXTRACTOR - 1)
     {
         divisor *= MSD_EXTRACTOR;
         dividend /= MSD_EXTRACTOR;
+    }*/
+    // for is better than the above while, using less var in the global scope (dividend)
+    for (int dividend = currentNumber; dividend > MSD_EXTRACTOR - 1; dividend /= MSD_EXTRACTOR)
+    {
+        divisor *= MSD_EXTRACTOR;
     }
 
     // Implement algorithm Part 2: "for" loop without initial expression

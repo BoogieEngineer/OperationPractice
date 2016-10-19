@@ -40,10 +40,11 @@ int main()
     // At least 1 iteration is needed, so "do" loop is used.
     do
     {
-        int currentLeastSignificantDigit = currentNumber % LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
-        cout << currentLeastSignificantDigit;
-        currentNumber /= LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
-    } while (currentNumber != 0);
+        //int currentLeastSignificantDigit = currentNumber % LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
+        //cout << currentLeastSignificantDigit;
+        cout << currentNumber % LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
+        //currentNumber /= LEAST_SIGNIFICANT_DIGIT_EXTRACTOR;
+    } while (currentNumber /= LEAST_SIGNIFICANT_DIGIT_EXTRACTOR); //(currentNumber != 0);
     
     // If the original input was negative, print also a minus sign in the end
     if (!inputIsNonNegative)
