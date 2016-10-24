@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A4E2_main.cpp">
+    <ClCompile Include="C1A4E1_ComputeMinimum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C1A4E1_ComputeMaximum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C1A4E1_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
