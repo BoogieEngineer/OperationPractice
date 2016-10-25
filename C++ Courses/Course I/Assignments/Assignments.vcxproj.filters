@@ -15,10 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A4E3_main.cpp">
+    <ClInclude Include="C1A4E4_MaxOf.h">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C1A4E3_PrintLines.cpp">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C1A4E4_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
