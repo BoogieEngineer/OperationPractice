@@ -2,8 +2,16 @@
 
 using namespace std;
 
+void copy(int *a, const int *b)
+    {
+        *a = *b;
+    }
+
 int main()
 {
-    cout << (int)('A');
-    return 0;
+    
+
+    const int a = 5, b = 10;
+
+    copy(&a, &b);
 }

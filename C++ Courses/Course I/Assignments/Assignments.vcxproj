@@ -11,10 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C1A4E4_MaxOf.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="C1A4E4_main.cpp" />
+    <ClCompile Include="C1A5E1_main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6778576-AB08-4592-9863-9137A02DD9EB}</ProjectGuid>

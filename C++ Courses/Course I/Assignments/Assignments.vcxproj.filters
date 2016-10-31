@@ -15,12 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C1A4E4_MaxOf.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="C1A4E4_main.cpp">
+    <ClCompile Include="C1A5E1_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
