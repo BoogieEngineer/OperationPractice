@@ -27,10 +27,10 @@ int main()
     cin >> value1 >> value2;
 
     // Print the main result:
-    cout << "ComputeMinimum(" << value1 << ", " << value2 << ")"
-        << " returned " << ComputeMinimum(value1, value2) << "\n";
-    cout << "ComputeMaximum(" << value1 << ", " << value2 << ")"
-        << " returned " << ComputeMaximum(value1, value2) << "\n";
+    cout << "ComputeMinimum(" << value1 << ", " << value2
+        << ") returned " << ComputeMinimum(value1, value2) << "\n";
+    cout << "ComputeMaximum(" << value1 << ", " << value2
+        << ") returned " << ComputeMaximum(value1, value2) << "\n";
 
     return 0;
 }

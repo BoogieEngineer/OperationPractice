@@ -12,5 +12,5 @@
 
 double &ComputeMinimum(const double &value1, const double &value2)
 {
-    return(double &)(value1 < value2 ? value1 : value2);
+    return (double &)(value1 < value2 ? value1 : value2);
 }
