@@ -25,12 +25,14 @@
 int main(void)
 {
     // Declare necessary variables:
-    int loopCount, rating, response, ratingCounters[RESPONSE_VALUES] = {0};
+    int loopCount, ratingCounters[RESPONSE_VALUES] = {0};
     int consecutiveRangeErrors = 0;
     
     // Carry out the algorithm
     for (loopCount = 0; loopCount < MAX_RESPONDENTS;)
     {
+        int response;
+
         // Geting user input:
         printf("Enter the rating of respondent #%i: ", loopCount + 1);
         scanf("%i", &response);
@@ -48,7 +50,8 @@ int main(void)
             ++consecutiveRangeErrors;
             if (consecutiveRangeErrors >= OUT_OF_RANGE_LIMIT)
                 break;
-            else continue;
+            else
+                continue;
         }
 
         // Increment the correct index for rating counter:
@@ -63,7 +66,7 @@ int main(void)
     // Print the survey results:
     for (loopCount = 0; loopCount < RESPONSE_VALUES; ++loopCount)
     {
-        printf("%7li        %5d\n", loopCount + MIN_RESPONSE_VALUE, ratingCounters[loopCount]);
+        printf("%7i        %5d\n", loopCount + MIN_RESPONSE_VALUE, ratingCounters[loopCount]);
     }
     
     return(EXIT_SUCCESS);
