@@ -7,10 +7,11 @@
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
- * This function finds the smallest number of 2 doubles using pointers.
+ * This function compares 2 doubles and returns the pointer to the smallest number.
  */
 
 double *ComputeMinimum(const double *value1, const double *value2)
 {
-    return (double *)&(*value1 < *value2 ? *value1 : *value2);
+    // Compare the values but return the pointer pointing to the min value
+    return (double *)(*value1 < *value2 ? value1 : value2);
 }

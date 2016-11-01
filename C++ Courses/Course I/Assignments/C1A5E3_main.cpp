@@ -7,8 +7,8 @@
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
- * This program takes 2 numbers from user input and prints the results of
- * two functions that compute the max and min of the numbers, respectively.
+ * This program takes 2 numbers from user input and prints the results of two 
+ * functions that return the pointer to the max and min of the numbers, respectively
  */
 
 #include <iostream>
@@ -28,9 +28,9 @@ int main()
 
     // Print the main result:
     cout << "ComputeMinimum(&" << value1 << ", &" << value2
-        << ") returned " << *ComputeMinimum(&value1, &value2) << "\n";
+        << ") returned &" << *ComputeMinimum(&value1, &value2) << "\n";
     cout << "ComputeMaximum(&" << value1 << ", &" << value2
-        << ") returned " << *ComputeMaximum(&value1, &value2) << "\n";
+        << ") returned &" << *ComputeMaximum(&value1, &value2) << "\n";
 
     return 0;
 }
