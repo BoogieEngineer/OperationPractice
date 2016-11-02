@@ -2,16 +2,14 @@
 
 using namespace std;
 
-void copy(int *a, const int *b)
-    {
-        *a = *b;
-    }
-
 int main()
 {
-    
+    int a = 5;
 
-    const int a = 5, b = 10;
+    int *x = &a;
 
-    copy(&a, &b);
+    cout << x << "\n";
+    cout << *x << "\n";
+
+    return 0;
 }
