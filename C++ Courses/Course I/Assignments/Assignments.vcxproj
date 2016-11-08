@@ -11,9 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A5E3_ComputeMaximum.cpp" />
-    <ClCompile Include="C1A5E3_ComputeMinimum.cpp" />
-    <ClCompile Include="C1A5E3_main.cpp" />
+    <ClCompile Include="C1A6E1_main.c" />
+    <ClCompile Include="C1A6E1_MyStrlen.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6778576-AB08-4592-9863-9137A02DD9EB}</ProjectGuid>

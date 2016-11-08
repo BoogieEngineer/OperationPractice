@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="C1A6E1_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C1A6E1_MyStrlen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
