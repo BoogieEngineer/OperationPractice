@@ -14,13 +14,17 @@ int MyStrcmp(const char *s1, const char *s2)
 {
     // Simultaneously step through both strings one char at a time to
     // find the first unequal corresponding characters.
-    while ((*s1) && (*s2))
+    while ((*s1) || (*s2))
     {
         // If 2 corresponding chars are unequal, return the difference between them
         if (*s1 != *s2)
         {
             return(*s1 - *s2);
         }
+        else if (*s1 == '\0' && *s2 != '\0')
+            return(-*s2);
+        else if (*s1 != '\0' && *s2 == '\0')
+            return(*s1);
         s1++;
         s2++;
     }

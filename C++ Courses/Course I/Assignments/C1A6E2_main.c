@@ -7,7 +7,8 @@
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
- * This function finds the length of a string.
+ * This function prints the results of strcmp and of another function that does
+ * the same thing as strcmp.
  */
 
 #include <stdio.h>
