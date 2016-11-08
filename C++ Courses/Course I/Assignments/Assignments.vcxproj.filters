@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A6E1_main.c">
+    <ClCompile Include="C1A6E2_MyStrcmp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C1A6E1_MyStrlen.c">
+    <ClCompile Include="C1A6E2_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
