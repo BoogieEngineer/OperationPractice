@@ -17,7 +17,8 @@ size_t MyStrlen(const char *s1)
     // Declare an extra pointer to be equal to the function parameter
     const char *lengthFinder = s1;
 
-    // Step through the string to find "\0" character
+    // Step through the string to find "\0" character and make lengthFinder
+    // point to the character right before it.
     while (*lengthFinder)
         lengthFinder++;
 

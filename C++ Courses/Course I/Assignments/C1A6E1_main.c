@@ -35,7 +35,7 @@ int main(void)
         inputString[--length] = '\0';
 
     // Print the results
-    printf("strlen(\"%s\") returned %u\n", inputString, (unsigned int)strlen(inputString));
+    printf("strlen(\"%s\") returned %u\n", inputString, (unsigned int)length);
     printf("MyStrlen(\"%s\") returned %u\n", inputString, (unsigned int)MyStrlen(inputString));
 
     return(EXIT_SUCCESS);
