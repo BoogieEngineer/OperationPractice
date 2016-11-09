@@ -18,6 +18,7 @@
 
 #define LENGTH 256 // Define input string length
 
+// Function prototype for GetSubstring
 char *GetSubstring(const char source[], int start, int count, char result[]);
 
 int main(void)
@@ -26,17 +27,20 @@ int main(void)
     int start, count;
     size_t length;
 
+    // Get the source string and trim the newline character off of the string
     printf("Enter a string: ");
     fgets(source, LENGTH, stdin);
     length = strlen(source);
     if (length != 0 && source[length - 1] == '\n')
         source[--length] = '\0';
 
+    // Get "start" and "count"
     printf("Enter start index and character count to copy: ");
     scanf("%i %i", &start, &count);
 
-    printf("\"%s\", %i, %i, extracts \"%s\"", source, start, count,
-        *GetSubstring(source, start, count, result));
+    // Print the results per the requirements
+    printf("\"%s\", %i, %i, extracts \"%s\"\n", source, start, count,
+        GetSubstring(source, start, count, result));
 
     return(EXIT_SUCCESS);
 }

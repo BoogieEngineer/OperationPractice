@@ -11,26 +11,29 @@
  * them to create a new string.
  */
 
-#include <string.h>
-
 char *GetSubstring(const char source[], int start, int count, char result[])
 {
+    // Create a copy of "result" string to return later
     char *resultCopy = result;
 
-    while ((*source) || (start))
+    // 1st loop to determine the chracter of "source" to start copying
+    while (*source && start)
     {
         source++;
         start--;
     }
 
-    while (*source)
+    // 2nd loop to copy the characters over to "result"
+    while (*source && count)
     {
         *result++ = *source++;
-        if (*source == '\0')
-            break;
+        count--;
     }
 
-    result[(int)strlen(result)] = '\0';
+    // Append the null terminator to the end of result
+    // After the 2nd loop above, *result should now be pointing the end of "result"
+    *result = '\0';
 
+    // Return the copy of "result"
     return(resultCopy);
 }
