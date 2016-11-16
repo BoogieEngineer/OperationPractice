@@ -15,10 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A6E3_GetSubstring.c">
+    <ClInclude Include="C1A7E1_MyTime.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C1A7E1_DetermineElapsedTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C1A6E3_main.c">
+    <ClCompile Include="C1A7E1_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

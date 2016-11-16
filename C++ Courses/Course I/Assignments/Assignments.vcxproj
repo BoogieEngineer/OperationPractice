@@ -11,8 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C1A6E3_GetSubstring.c" />
-    <ClCompile Include="C1A6E3_main.c" />
+    <ClInclude Include="C1A7E1_MyTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C1A7E1_DetermineElapsedTime.cpp" />
+    <ClCompile Include="C1A7E1_main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6778576-AB08-4592-9863-9137A02DD9EB}</ProjectGuid>
