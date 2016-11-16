@@ -11,11 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C1A7E1_MyTime.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="C1A7E1_DetermineElapsedTime.cpp" />
-    <ClCompile Include="C1A7E1_main.cpp" />
+    <ClCompile Include="C1A7E2_main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6778576-AB08-4592-9863-9137A02DD9EB}</ProjectGuid>

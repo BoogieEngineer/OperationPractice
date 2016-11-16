@@ -45,14 +45,13 @@ MyTime *DetermineElapsedTime(const MyTime *StartTime, const MyTime *StopTime)
     }
 
     elapsedTime.hours = stopTime.hours - startTime.hours;
-    if (elapsedTime.hours = 0)
+    if (elapsedTime.hours < 0)
     {
         elapsedTime.hours += HOURS_PER_DAY;
     }
 
-    if (elapsedTime.hours == 0 && elapsedTime.minutes == 0
-        && elapsedTime.seconds == 0)
-        elapsedTime.hours = 24;
+    if (elapsedTime.hours == 0 && elapsedTime.minutes == 0 && elapsedTime.seconds == 0)
+        elapsedTime.hours = HOURS_PER_DAY;
     
     // Return the elapsed time
     return(&elapsedTime);

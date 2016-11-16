@@ -49,6 +49,5 @@ int main()
             << setw(2) << ElapsedTime.minutes << delim2
             << setw(2) << ElapsedTime.seconds << "\n";
     }
-    
     return 0;
 }
