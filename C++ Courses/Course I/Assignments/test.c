@@ -5,11 +5,11 @@
 
 int main(void)
 {
-
-    static char *p[] =
-{"now's the", "how now brown",
-"my letter is in the mail"};
-printf("%s %s %s", &*(p+0)[6], &p[1][8], &p[2][3]);
+    int ax;
+    scanf("%d", &ax);
+    ungetc('a', stdin);
+    scanf("%x", &ax);
+    printf("%x", ax);
 
     return(EXIT_SUCCESS);
 }

@@ -6,8 +6,9 @@ using namespace std;
 
 int main()
 {
-    int a = 7;
-    long b = 1 << a;
-    cout << bitset<8>(b) << "\n" << bitset<8>(128);
+    char ch;
+    while ((ch = cin.get()) != EOF)
+        cout.put(ch);
+
     return 0;
 }
