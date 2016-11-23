@@ -15,7 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="test.c">
+=======
+    <ClCompile Include="C1A8E3_main.cpp">
+>>>>>>> ff7fe175ff74d9d18036c7fdf4cf96ffa6e989f0
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
