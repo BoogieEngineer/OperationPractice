@@ -17,7 +17,7 @@
 using namespace std;
 
 const int REQUIRED_ARGUMENTS = 4;
-const int LINE_LENGTH = 1024;
+const int BUFFER_LENGTH = 1024;
 
 enum CommandLineArgID
 {
@@ -47,18 +47,29 @@ int main(int argc, char *argv[])
 
     // Open the destination file to write to
     const char * const destinationFileName = argv[OUT_FILE];
-    ofstream destinationFile(destinationFileName);
+    fstream destinationFile(destinationFileName, ios_base::in | ios_base::in | ios_base::app);
     if (!destinationFile.is_open())
     {
         cerr << "Cannot open the destination file " << destinationFileName << "\n";
         exit(EXIT_FAILURE);
     }
 
-    while(1)
+    while(!sourceFile.eof())
     {
-        char line1[LINE_LENGTH];
-        getline(sourceFile, line, '\n');
+        char line[BUFFER_LENGTH];
+        sourceFile.getline(line, sizeof(line), '\n');
+        char *cp1;
+        for (cp1 = line; char *cp2 = strstr(cp1, argv[STRING_TO_SEARCH]);)
+        {
+            destinationFile.write(cp1, cp2 - cp1);
+            destinationFile << argv[STRING_TO_REPLACE];
+            cp1 = cp2 + strlen(argv[STRING_TO_SEARCH]);
+        }
+        destinationFile << cp1 << '\n';
     }
+
+    sourceFile.close();
+    destinationFile.close();
 
     return 0;
 }
