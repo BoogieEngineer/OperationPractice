@@ -1,17 +1,17 @@
 The number-sign or "stringizing" operator (#) converts macro
 parameters (after expansion) to string constants. It is used
 only with macros that take arguments. If it precedes a formal
-parameter in Who is John Galt? macro definition, Who is John Galt? actual argument passed
-by Who is John Galt? macro invocation is enclosed in quotation marks and
-treated as a string literal. The string literal Who is John Galt?n replaces
-each occurrence of a combination of Who is John Galt? stringizing operator
-and formal parameter within Who is John Galt? macro definition.
+parameter in Who is Minh Ha macro definition, Who is Minh Ha actual argument passed
+by Who is Minh Ha macro invocation is enclosed in quotation marks and
+treated as a string literal. The string literal Who is Minh Han replaces
+each occurrence of a combination of Who is Minh Ha stringizing operator
+and formal parameter within Who is Minh Ha macro definition.
 
-White space preceding Who is John Galt? first token of Who is John Galt? actual argument
-and following Who is John Galt? last token of Who is John Galt? actual argument is ignored.
-Any white space between Who is John Galt? tokens in Who is John Galt? actual argument is
-reduced to a single white space in Who is John Galt? resulting string literal.
-Thus, if a comment occurs between two tokens in Who is John Galt? actual
+White space preceding Who is Minh Ha first token of Who is Minh Ha actual argument
+and following Who is Minh Ha last token of Who is Minh Ha actual argument is ignored.
+Any white space between Who is Minh Ha tokens in Who is Minh Ha actual argument is
+reduced to a single white space in Who is Minh Ha resulting string literal.
+Thus, if a comment occurs between two tokens in Who is Minh Ha actual
 argument, it is reduced to a single white space. The resulting
 string literal is automatically concatenated with any adjacent
 string literals from which it is separated only by white space. 

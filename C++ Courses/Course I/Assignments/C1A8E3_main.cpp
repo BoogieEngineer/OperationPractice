@@ -7,11 +7,14 @@
  * Operating system: Windows 7.
  * Compiler & version: Visual C++ 2010.
  *
- * This program seaches for a string and replace it with another string.
+ * This program searches for all occurrences of a pre-specified string in a text file
+ * and replace them with another replacement string.
  */
 
 #include <iostream>
+#include <cstdlib>
 #include <fstream>
+#include <cstring>
 #include <string>
 
 using namespace std;
@@ -19,12 +22,13 @@ using namespace std;
 const int REQUIRED_ARGUMENTS = 4;
 const int BUFFER_LENGTH = 1024;
 
+// Enum to access command line arguments
 enum CommandLineArgID
 {
     IN_FILE = 1,
     OUT_FILE,
     STRING_TO_SEARCH,
-    STRING_TO_REPLACE,
+    STRING_TO_REPLACE
 };
 
 int main(int argc, char *argv[])
@@ -37,37 +41,37 @@ int main(int argc, char *argv[])
     }
 
     // Open the source file to read from
-    const char * const sourceFileName = argv[IN_FILE];
-    ifstream sourceFile(sourceFileName);
+    ifstream sourceFile(argv[IN_FILE]);
     if (!sourceFile.is_open())
     {
-        cerr << "Cannot open the source file " << sourceFileName << "\n";
+        cerr << "Cannot open the source file " << argv[IN_FILE] << "\n";
         exit(EXIT_FAILURE);
     }
 
     // Open the destination file to write to
-    const char * const destinationFileName = argv[OUT_FILE];
-    fstream destinationFile(destinationFileName, ios_base::in | ios_base::in | ios_base::app);
+    fstream destinationFile(argv[OUT_FILE], ios_base::in | ios_base::in | ios_base::app);
     if (!destinationFile.is_open())
     {
-        cerr << "Cannot open the destination file " << destinationFileName << "\n";
+        cerr << "Cannot open the destination file " << argv[OUT_FILE] << "\n";
         exit(EXIT_FAILURE);
     }
 
-    while(!sourceFile.eof())
+    // Perform the find and replace all algorithm per instructions
+    char searchStringLength = (char)strlen(argv[STRING_TO_SEARCH]);
+    while (!sourceFile.eof())
     {
-        char line[BUFFER_LENGTH];
+        char *cp1, line[BUFFER_LENGTH];
         sourceFile.getline(line, sizeof(line), '\n');
-        char *cp1;
         for (cp1 = line; char *cp2 = strstr(cp1, argv[STRING_TO_SEARCH]);)
         {
             destinationFile.write(cp1, cp2 - cp1);
             destinationFile << argv[STRING_TO_REPLACE];
-            cp1 = cp2 + strlen(argv[STRING_TO_SEARCH]);
+            cp1 = cp2 + searchStringLength;
         }
         destinationFile << cp1 << '\n';
     }
 
+    // Close the files
     sourceFile.close();
     destinationFile.close();
 

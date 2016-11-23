@@ -11,11 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <ClCompile Include="test.c" />
-=======
     <ClCompile Include="C1A8E3_main.cpp" />
->>>>>>> ff7fe175ff74d9d18036c7fdf4cf96ffa6e989f0
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E6778576-AB08-4592-9863-9137A02DD9EB}</ProjectGuid>
